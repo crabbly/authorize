@@ -1,0 +1,27 @@
+{
+    "name": "crabbly/authorize",
+
+    "description": "Roles and permissions authorization package for Laravel.",
+
+    "license": "MIT",
+
+    "keywords": ["laravel", "authorize"],
+
+    "authors": [
+        {
+            "name": "Rodrigo Vieira",
+            "email": "rodrigo@crabbly.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "illuminate/support": "^5.2",
+        "illuminate/database": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Crabbly\\Authorize\\": "packages/crabbly/authorize/src"
+        }
+    }
+}
