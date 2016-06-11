@@ -30,10 +30,7 @@ php artisan vendor:publish --provider="Crabbly\Authorize\AuthorizeServiceProvide
 
 php artisan migrate
 
-## Usage
-
-### The Basics
-
+## Step 4: Add the `UserAuthorizeTrait` to your `User` model:
 
 ```php
 <?php
@@ -49,4 +46,35 @@ class User extends Model
 
     //...
 }
+```
+
+## Usage
+
+### Creating Roles
+
+Create an `admin` role:
+
+```php
+<?php
+
+  Role::create([
+            'name' => 'admin',
+            'display_name' => "Administrator",
+            'description' => '' //optional
+        ]);
+```
+
+### Adding and Removing Roles
+
+Roles and Users have a Many to Many relationship. We can attach and detach roles to users like this:
+
+```php
+<?php
+
+  //add role of id $role_id to $user
+  $user->roles()->attach($role_id);
+
+  //remove role of id $role_id to $user
+  $user->roles()->detach($role_id);
+
 ```
