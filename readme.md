@@ -24,6 +24,12 @@ Crabbly\Authorize\AuthorizeServiceProvider::class
 This will bootstrap the package into Laravel.
 
 
+## Step 3: Publish and Run Migrations
+
+php artisan vendor:publish --provider="Crabbly\Authorize\AuthorizeServiceProvider" --tag="migrations"
+
+php artisan migrate
+
 ## Usage
 
 ### The Basics

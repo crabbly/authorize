@@ -11,7 +11,7 @@ trait UserAuthorize
      */
     public function roles()
     {
-        return $this->belongsToMany('\App\Role')->withTimestamps();
+        return $this->belongsToMany('Crabbly\Authorize\Role')->withTimestamps();
     }
 
     
@@ -85,6 +85,6 @@ trait UserAuthorize
      */
     public function rolesWithPermissions()
     {
-        return $this->belongsToMany('\App\Role')->with('permissions');
+        return $this->belongsToMany('Crabbly\Authorize\Role')->with('permissions');
     }
 }

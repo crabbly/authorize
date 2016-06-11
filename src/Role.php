@@ -24,7 +24,7 @@ class Role extends Model {
      */
     public function permissions()
     {
-        return $this->belongsToMany('App\Permission')->withTimestamps();
+        return $this->belongsToMany('Crabbly\Authorize\Permission')->withTimestamps();
     }
 
 
