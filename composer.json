@@ -13,13 +13,17 @@
             "email": "rodrigo@crabbly.com"
         }
     ],
+
     "require": {
         "illuminate/support": "^5.2",
         "illuminate/database": "^5.2"
     },
+
     "autoload": {
         "psr-4": {
             "Crabbly\\Authorize\\": "src/"
         }
-    }
+    },
+
+    "minimum-stability": "dev"
 }
