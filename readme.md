@@ -37,7 +37,7 @@ php artisan migrate
 
 namespace App;
 
-use Crabbly\Authoriz\UserAuthorizeTrait;
+use Crabbly\Authorize\UserAuthorizeTrait;
 use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
